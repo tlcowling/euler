@@ -15,5 +15,5 @@ timer_start = Time.now
 sum = Prime.take_while {|p| p < 2000000 }.reduce(:+)
 
 time = (Time.now-timer_start)*1000
-puts "#{sum} (#{time}ms)"
+puts "10. #{sum} (#{time}ms)"
 

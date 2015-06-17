@@ -53,5 +53,4 @@ triplet = answer * factor
 product = triplet.reduce(:*)
 
 time = (Time.now-timer_start)*1000
-puts "#{product} (#{time}ms)"
-
+puts "9. #{product} (#{time}ms)"

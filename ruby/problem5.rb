@@ -1,6 +1,5 @@
 #!/usr/bin/env ruby
 #Problem 5
-#=====================
 
 =begin
 
@@ -18,6 +17,6 @@ timer_start = Time.now
 #
 #     2 * 3 * 2 * 5 *     7 * 2 * 3 *      11 *      13           * 2  * 17 *      19 
 
-puts 2*3*2*5*7*2*3*11*13*2*17*19
+answer = 2*3*2*5*7*2*3*11*13*2*17*19
 
-puts "This took #{(Time.now-timer_start)*1000} milliseconds"
+puts "5. #{answer} (#{(Time.now-timer_start)*1000} ms)"

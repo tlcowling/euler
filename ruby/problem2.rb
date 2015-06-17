@@ -1,5 +1,6 @@
+#!/usr/bin/env ruby
+
 #Problem 2
-#=====================
 
 =begin
 
@@ -30,5 +31,4 @@ begin
   n += 1
 end while fib(n) <= 4000000
 
-puts even_sum
-puts "This took #{(Time.now-timer_start)*1000} milliseconds"
+puts "2. #{even_sum} (#{(Time.now-timer_start)*1000}ms)"

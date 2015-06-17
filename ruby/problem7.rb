@@ -1,6 +1,5 @@
 #!/usr/bin/env ruby
 #Problem 7
-#=====================
 
 =begin
 
@@ -15,6 +14,6 @@ timer_start = Time.now
 # I probably should actually work through this, but I've done it before: Sieve of Eratosthenes and a whole bunch of other algorithms so this time, 
 # its the mathn library again
 require 'mathn'
-p Prime.take(10001).last
+answer = Prime.take(10001).last
 
-puts "This took #{(Time.now-timer_start)*1000} milliseconds"
+puts "7. #{answer} #{(Time.now-timer_start)*1000} ms)"

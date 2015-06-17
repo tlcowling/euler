@@ -1,7 +1,6 @@
 #!/usr/bin/env ruby
 
 #Problem 1
-#=====================
 
 =begin
 
@@ -14,5 +13,4 @@ timer_start = Time.now
 
 answer = (1...1000).to_a.select{|n| n%3==0 || n%5==0}.reduce(:+)
 
-puts "The sum of all the multiples of 3 or 5 below 1000 is #{answer}"
-puts "This took #{(Time.now-timer_start)*1000} milliseconds"
+puts "1. #{answer} (#{(Time.now-timer_start)*1000}ms)"

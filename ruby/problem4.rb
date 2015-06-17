@@ -1,5 +1,6 @@
+#!/usr/bin/env ruby
+
 #Problem 4
-#=====================
 
 =begin
 
@@ -31,5 +32,4 @@ while j > 100 do
 end
 
 
-puts answer
-puts "This took #{(Time.now-timer_start)*1000} milliseconds"
+puts "4. #{answer} (#{(Time.now-timer_start)*1000} ms)"

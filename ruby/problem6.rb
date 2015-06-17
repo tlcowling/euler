@@ -1,6 +1,5 @@
 #!/usr/bin/env ruby
 #Problem 6
-#=====================
 
 =begin
 
@@ -30,6 +29,4 @@ end
 
 n = 100
 answer = square_of_n_integers(n) - sum_of_squares(n)
-p answer
-
-puts "This took #{(Time.now-timer_start)*1000} milliseconds"
+puts "6. #{answer} (#{(Time.now-timer_start)*1000} ms)"

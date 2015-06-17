@@ -1,5 +1,6 @@
+#!/usr/bin/env ruby
+
 #Problem 3
-#===========
 
 =begin
 
@@ -17,6 +18,4 @@ timer_start = Time.now
 prime_factors = prime.prime_division
 factor = prime_factors.max[0] * prime_factors.max[1]
 
-p "The highest prime factor of #{prime} is #{factor}"
-p "It took #{(Time.now- timer_start)*1000} milliseconds"
-
+puts "3. #{prime} (#{(Time.now- timer_start)*1000} ms)" 
