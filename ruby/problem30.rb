@@ -1,3 +1,4 @@
+#!/usr/bin/env ruby
 #Problem 30
 
 =begin
@@ -13,22 +14,24 @@ The sum of these numbers is 1634 + 8208 + 9474 = 19316.
 Find the sum of all the numbers that can be written as the sum of fifth powers of their digits.
 =end
 
+timer_start = Time.now
+
 max = 9**5 * 4
 sum_of_digit_sums = 0
 
 def digit_sum(number)
-	sum=0
-	number.to_s.split(//).each{
-		|digit|
-		sum = sum+ digit.to_i ** 5
-	}
-	sum
+  sum=0
+  number.to_s.split(//).each{
+    |digit|
+    sum = sum+ digit.to_i ** 5
+  }
+sum
 end
 
 (2..max).each{
-	|number|
-	sum = digit_sum(number)
-	sum_of_digit_sums += number if (number == sum)
+  |number|
+  sum = digit_sum(number)
+  sum_of_digit_sums += number if (number == sum)
 }
 
-puts "The sum of all the numbers that can be expressed as the sum of the fifth powers of their digits is #{sum_of_digit_sums}"
+puts "30. #{sum_of_digit_sums} (#{(Time.now - timer_start)*1000} ms)"
