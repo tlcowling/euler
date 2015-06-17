@@ -4,7 +4,7 @@
 #
 
 timer_start = Time.now
-n = 10
+n = 11
 
 (1..n).each {|i|
   require_relative "problem#{i}.rb"
