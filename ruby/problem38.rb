@@ -1,5 +1,6 @@
+#/usr/bin/env ruby
+
 #Problem 38
-#=============
 
 =begin
 Take the number 192 and multiply it by each of 1, 2, and 3:
@@ -18,22 +19,20 @@ What is the largest 1 to 9 pandigital 9-digit number that can be formed as the c
 timer_start = Time.now
 
 class String
-	def pandigital?
-		s=self.split("")
-		s.length == 9 and not s.include?("0") and s.uniq.length == 9
-	end
+  def pandigital?
+    s=self.split("")
+    s.length == 9 and not s.include?("0") and s.uniq.length == 9
+  end
 end
 
 pandigitals = []
 9999.times do |x|
-	s = ""
-	(1..9).each do |i|
-		s += (x*i).to_s
-		break if s.length >= 9
-	end
-	pandigitals << s.to_i if s.pandigital?
+  s = ""
+  (1..9).each do |i|
+    s += (x*i).to_s
+    break if s.length >= 9
+  end
+  pandigitals << s.to_i if s.pandigital?
 end
 
-puts pandigitals.max
-
-p "It took #{(Time.now - timer_start)*1000} milliseconds"
+puts "38: #{pandigitals.max} (#{(Time.now - timer_start)*1000} ms)" 
