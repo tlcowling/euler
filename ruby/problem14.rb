@@ -22,6 +22,52 @@
 
 timer_start = Time.now
 
-sum = 0
+def iterate(n)
+  (n % 2 == 0) ? (n/2) : 3*n+1
+end
 
-puts "14. #{sum} (#{Time.now - timer_start} ms)"
+def number_of_terms(start)
+  times = 0
+  while start != 1 do
+    start = iterate(start)
+    times += 1
+  end
+  times + 1
+end
+
+answer = 0
+
+(1..1000000).each { |x| 
+  terms = number_of_terms(x)
+  answer = x if terms > answer
+}
+
+# An attempt at a multithreaded version... so slow
+# Each thread will get 100000 calculations to make
+#threads = []
+
+#total = 1000000
+#tn = 10
+#eachcount = total/tn
+#answers_for_threads = []
+#
+#(0..tn).each{ |thread_number|
+#  threads << Thread.new {
+#    start = (thread_number*eachcount) + 1
+#    finish   = eachcount*tn
+#    highest = 0
+#    (start..finish).each {|x|
+#      terms = number_of_terms(x)
+#      if terms > highest
+#        highest = terms
+#      end
+#    }
+#    answers_for_threads << highest
+#  }
+#}
+#
+#threads.each { |thr| thr.join }
+#puts answers_for_threads
+#answer = answers_for_threads.max
+
+puts "14. #{answer} (#{(Time.now - timer_start)*1000}) ms)"

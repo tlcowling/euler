@@ -1,5 +1,6 @@
+#!/usr/bin/env ruby
+
 #Problem 39
-#=========================
 
 =begin
 
@@ -27,6 +28,7 @@ end
 
 sorted = counts.sort { |a, b| a[1] <=> b[1] }
 
-puts sorted.last[0]
+answer = sorted.last[0]
+time = (Time.now - timer_start)*1000
 
-p "It took #{(Time.now - timer_start)*1000} milliseconds"
+puts "39. #{answer} (#{time} ms)"
